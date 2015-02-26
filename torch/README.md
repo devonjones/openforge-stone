@@ -23,6 +23,14 @@ To build this, you need the following parts:
 * Hot glue stick
 * Superglue
 
+Print the following parts (the others were used to build these):
+
+* stone_torch_wall_hatch.stl
+* stone_torch_wall.stl
+* torch_battery_holder.stl
+* torch_lower_base.stl
+* torch.stl
+
 ![Parts](images/2015-02-25 19.16.55.jpg)
 
 First, take apart the LED tea light.  I used one from "Room Essentials".  Take out the screw and pry apart the housing.  Once that is apart, set aside the LED and the battery.  You can throw away the rest.  First assembly step is to take the battery and put it in the battery holder in the base.  The positive side should be down, with the negative side facing up.  The switch on the battery holder should be placed so that itgoes through the bottom hole in the base.
