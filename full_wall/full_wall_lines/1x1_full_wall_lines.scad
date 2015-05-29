@@ -1,6 +1,6 @@
 include <../../../lib/forge_lib.scad>
 
-module 1x_wall_line(sc, seed, manifold=-0.05) {
+module 1x1_wall_line(sc, seed, manifold=-0.05) {
   seed_vect = rands(0, 100, 10, seed=seed);
   
   translate([0,1,0]) scale([1,1,1+sc]) union() {
@@ -26,7 +26,7 @@ module 1x_wall_line(sc, seed, manifold=-0.05) {
   }
 }
       
-module 1x_static_wall_line(front, back, right, left, manifold=-0.05) {
+module 1x1_static_wall_line(front, back, right, left, manifold=-0.05) {
   translate([0,1,0]) scale([1,1,1]) union() {
     translate([1,0,0]) cube([23,23,7]);
     translate([0,-manifold,0]) union() {
@@ -51,7 +51,7 @@ module 1x_static_wall_line(front, back, right, left, manifold=-0.05) {
   }
 }
 
-module 1x_stagger_wall_line(sc, seed, manifold=-0.05) {
+module 1x1_stagger_wall_line(sc, seed, manifold=-0.05) {
   seed_vect = rands(0, 100, 10, seed=seed);
   translate([0,1,0]) scale([1,1,1+sc]) union() {
     translate([1,0,0]) cube([23,23,7]);
@@ -77,9 +77,8 @@ module 1x_stagger_wall_line(sc, seed, manifold=-0.05) {
   }
 }
 
-module 1x_static_stagger_wall_line(front, back, right, left, manifold=-0.05) {
+module 1x1_static_stagger_wall_line(front, back, right, left, manifold=-0.05) {
   translate([0,1,0]) scale([1,1,1]) union() {
-    translate([1,0,0]) cube([23,8.2,7]);
     translate([1,0,0]) cube([23,23,7]);
     translate([0,-manifold,0]) union() {
       translate([1,0,7]) rotate([0,90,0]) scale([7/10,1,5/7]) static_face("../../../lib/", front[0]);
@@ -103,7 +102,7 @@ module 1x_static_stagger_wall_line(front, back, right, left, manifold=-0.05) {
   }
 }
 
-module 1x_wall_top(seed, manifold=-0.05) {
+module 1x1_wall_top(seed, manifold=-0.05) {
   seed_vect = rands(0, 100, 7, seed=seed);
   translate([0,1,manifold]) rotate([-90,0,0]) scale([1,1,8.2/7]) union() {
     translate([1,0,0]) scale([1.15,1,7/10]) rand_face("../../../lib/", seed_vect[0]);
@@ -121,7 +120,7 @@ module 1x_wall_top(seed, manifold=-0.05) {
   }
 }
 
-module 1x_static_wall_top(top, manifold=-0.05) {
+module 1x1_static_wall_top(top, manifold=-0.05) {
   translate([0,1,manifold]) rotate([-90,0,0]) scale([1,1,8.2/7]) union() {
     translate([1,0,0]) scale([1.15,1,7/10]) static_face("../../../lib/", top[0]);
     translate([12.5,0,0]) scale([1.15,1,7/10]) static_face("../../../lib/", top[1]);
@@ -138,7 +137,7 @@ module 1x_static_wall_top(top, manifold=-0.05) {
   }
 }
 
-module 1x_staggered_wall_top(seed, manifold=-0.05) {
+module 1x1_staggered_wall_top(seed, manifold=-0.05) {
   seed_vect = rands(0, 100, 7, seed=seed);
   translate([25,0,0]) rotate([0,0,90]) union() {
     translate([0,1,manifold]) rotate([-90,0,0]) scale([1,1,8.2/7]) union() {
@@ -158,7 +157,7 @@ module 1x_staggered_wall_top(seed, manifold=-0.05) {
   }
 }
 
-module 1x_static_staggered_wall_top(top, manifold=-0.05) {
+module 1x1_static_staggered_wall_top(top, manifold=-0.05) {
   translate([25,0,0]) rotate([0,0,90]) union() {
     translate([0,1,manifold]) rotate([-90,0,0]) scale([1,1,8.2/7]) union() {
       translate([1,0,0]) scale([1.15,1,7/10]) static_face("../../../lib/", top[0]);
@@ -191,26 +190,26 @@ seed_vect=rands(0, 100, 2);
 if(rend) {
   if(random) {
     if(staggered) {
-      1x_stagger_wall_line(0, seed_vect[0]);
+      1x1_stagger_wall_line(0, seed_vect[0]);
       if(render_top) {
-        translate([0,0,7]) 1x_static_staggered_wall_top(seed_vect[1]);
+        translate([0,0,7]) 1x1_static_staggered_wall_top(seed_vect[1]);
       }
     } else {
-      1x_wall_line(0, seed_vect[0]);
+      1x1_wall_line(0, seed_vect[0]);
       if(render_top) {
-        translate([0,0,7]) 1x_wall_top(seed_vect[1]);
+        translate([0,0,7]) 1x1_wall_top(seed_vect[1]);
       }
     }
   } else {
     if(staggered) {
-      1x_static_stagger_wall_line(front, back, right, left);
+      1x1_static_stagger_wall_line(front, back, right, left);
       if(render_top) {
-        translate([0,0,7]) 1x_static_staggered_wall_top(top);
+        translate([0,0,7]) 1x1_static_staggered_wall_top(top);
       }
     } else {
-      1x_static_wall_line(front, back, right, left);
+      1x1_static_wall_line(front, back, right, left);
       if(render_top) {
-        translate([0,0,7]) 1x_static_wall_top(top);
+        translate([0,0,7]) 1x1_static_wall_top(top);
       }
     }
   }
