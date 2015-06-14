@@ -479,4 +479,126 @@ $OPENSCAD -o intermediate/3x1_full_wall_line_2.stl \
 #  -D 'top= [31, 38, 0, 24, 17, 20, 5, 57, 25, 35, 61, 27, 8, 3, 56, 44, 59, 39, 63, 18, 31, 6, 18, 2, 26, 13, 39, 31, 22, 4]' \
 #  3x1_full_wall_lines.scad
 
+#######
+# 4x1 #
+#######
+
+#$OPENSCAD -o intermediate/4x1_full_wall_line_1.stl \
+#  -D 'rend=true' -D 'random=false' -D 'staggered=false' -D 'render_top=false' \
+#  -D 'front=[17,  1, 41, 59, 38,  5, 51, 61, 12,  0]' \
+#  -D 'back=[ 43, 56, 11,  3, 60, 28, 18, 22, 31, 16]' \
+#  -D 'right=[ 7, 48, 21]' \
+#  -D 'left=[ 32, 45, 49]' \
+#  4x1_full_wall_lines.scad
+#
+#$OPENSCAD -o intermediate/4x1_full_wall_line_2.stl \
+#  -D 'rend=true' -D 'random=false' -D 'staggered=false' -D 'render_top=false' \
+#  -D 'front=[21, 19, 54, 11, 26, 45, 25, 16, 40, 46]' \
+#  -D 'back=[  1, 20, 10,  4, 63, 24,  2, 61,  6, 29]' \
+#  -D 'right=[46, 17, 14]' \
+#  -D 'left=[ 38, 51, 54]' \
+#  4x1_full_wall_lines.scad
+#
+#$OPENSCAD -o intermediate/4x1_full_wall_line_3.stl \
+#  -D 'rend=true' -D 'random=false' -D 'staggered=false' -D 'render_top=false' \
+#  -D 'front=[60, 49,  3, 31, 27, 35, 13, 53, 36,  6]' \
+#  -D 'back=[ 34, 26, 38, 42, 17, 51, 23, 32, 44, 14]' \
+#  -D 'right=[18, 31,  0]' \
+#  -D 'left=[ 26,  8,  5]' \
+#  4x1_full_wall_lines.scad
+#
+$OPENSCAD -o intermediate/4x1_full_wall_line_4.stl \
+  -D 'rend=true' -D 'random=false' -D 'staggered=false' -D 'render_top=false' \
+  -D 'front=[39, 30, 41, 18, 60,  0,  0, 44, 54, 50]' \
+  -D 'back=[ 12, 55, 42, 52, 20,  0,  0, 32, 22,  9]' \
+  -D 'right=[26, 18, 40]' \
+  -D 'left=[ 31,  9,  8]' \
+  4x1_full_wall_lines.scad
+#  -D 'front=[39, 30, 41, 18, 60, 19, 45, 44, 54, 50]' \
+#  -D 'back=[ 12, 55, 42, 52, 20, 11, 36, 32, 22,  9]' \
+#  -D 'right=[26, 18, 40]' \
+#  -D 'left=[ 31,  9,  8]' \
+#
+#$OPENSCAD -o intermediate/4x1_full_wall_line_5.stl \
+#  -D 'rend=true' -D 'random=false' -D 'staggered=false' -D 'render_top=false' \
+#  -D 'front=[53, 63,  6, 62, 40, 10, 38, 32, 58, 33]' \
+#  -D 'back=[  1, 29, 46, 49,  8,  7, 39, 41, 19,  4]' \
+#  -D 'right=[41, 36, 11]' \
+#  -D 'left=[ 32, 27, 37]' \
+#  4x1_full_wall_lines.scad
+#
+#$OPENSCAD -o intermediate/4x1_full_wall_line_6.stl \
+#  -D 'rend=true' -D 'random=false' -D 'staggered=false' -D 'render_top=false' \
+#  -D 'front=[59,  0, 36, 57, 31, 24, 51, 35, 56, 43]' \
+#  -D 'back=[ 17, 58, 30, 23,  6, 18, 50, 61, 53, 38]' \
+#  -D 'right=[37,  1, 36]' \
+#  -D 'left=[ 24, 19, 29]' \
+#  4x1_full_wall_lines.scad
+#
+#$OPENSCAD -o intermediate/4x1_full_wall_line_top.stl \
+#  -D 'rend=true' -D 'random=false' -D 'staggered=false' -D 'render_top=true' \
+#  -D 'front=[59,  0, 36, 57, 31, 24, 51, 35, 56, 43]' \
+#  -D 'back=[ 17, 58, 30, 23,  6, 18, 50, 61, 53, 38]' \
+#  -D 'right=[37,  1, 36]' \
+#  -D 'left=[ 24, 19, 29]' \
+#  -D 'top=[  19, 37, 12, 58, 28, 63,  1, 13, 46, 18, 26,  2,  4, 33, 28, 50, 14, 59, 21, 31, 38,  0, 24, 17, 20, 5, 57, 25, 35, 61, 23]' \
+#  4x1_full_wall_lines.scad
+#
+#$OPENSCAD -o intermediate/4x1_staggered_full_wall_line_1.stl \
+#  -D 'rend=true' -D 'random=false' -D 'staggered=true' -D 'render_top=false' \
+#  -D 'front=[14, 48, 44, 62, 34, 24, 63, 55,  7, 30, 61]' \
+#  -D 'back=[ 37, 13,  1, 35, 27, 58, 40, 53, 30, 36, 38]' \
+#  -D 'right=[17, 51, 25]' \
+#  -D 'left=[ 59, 23, 24]' \
+#  4x1_full_wall_lines.scad
+#
+#$OPENSCAD -o intermediate/4x1_staggered_full_wall_line_2.stl \
+#  -D 'rend=true' -D 'random=false' -D 'staggered=true' -D 'render_top=false' \
+#  -D 'front=[30, 32, 33, 37, 43, 10, 56,  4,  9,  7, 31]' \
+#  -D 'back=[ 50, 54, 62,  5, 52,  0, 39, 59, 41, 44, 22]' \
+#  -D 'right=[28, 62, 36]' \
+#  -D 'left=[ 19, 43,  0]' \
+#  4x1_full_wall_lines.scad
+#
+#$OPENSCAD -o intermediate/4x1_staggered_full_wall_line_3.stl \
+#  -D 'rend=true' -D 'random=false' -D 'staggered=true' -D 'render_top=false' \
+#  -D 'front=[42, 28, 58, 29,  2, 57, 50, 22, 39,  1, 24]' \
+#  -D 'back=[ 19,  9, 33,  8, 55, 12,  0, 45, 21, 51, 10]' \
+#  -D 'right=[30, 31, 27]' \
+#  -D 'left=[  5, 47, 54]' \
+#  4x1_full_wall_lines.scad
+#
+#$OPENSCAD -o intermediate/4x1_staggered_full_wall_line_4.stl \
+#  -D 'rend=true' -D 'random=false' -D 'staggered=true' -D 'render_top=false' \
+#  -D 'front=[28, 16, 52,  4, 25,  2, 29, 11, 34, 61, 12]' \
+#  -D 'back=[ 59, 24,  0, 27, 14,  5, 54, 45, 56,  1, 37]' \
+#  -D 'right=[59, 22, 52]' \
+#  -D 'left=[ 30, 19, 12]' \
+#  4x1_full_wall_lines.scad
+#
+#$OPENSCAD -o intermediate/4x1_staggered_full_wall_line_5.stl \
+#  -D 'rend=true' -D 'random=false' -D 'staggered=true' -D 'render_top=false' \
+#  -D 'front=[20, 12, 37, 14, 42, 26, 22, 53, 60, 21, 0]' \
+#  -D 'back=[ 57, 60, 51, 35, 34, 33,  3, 28, 25, 31, 12]' \
+#  -D 'right=[17, 26, 39]' \
+#  -D 'left=[ 24, 55, 29]' \
+#  4x1_full_wall_lines.scad
+#
+#$OPENSCAD -o intermediate/4x1_staggered_full_wall_line_6.stl \
+#  -D 'rend=true' -D 'random=false' -D 'staggered=true' -D 'render_top=false' \
+#  -D 'front=[27,  8,  3, 56, 44, 59, 39, 63, 18, 31,  6]' \
+#  -D 'back=[  1, 26, 13, 39, 31, 22,  4,  1, 58, 24, 12]' \
+#  -D 'right=[40, 58, 50]' \
+#  -D 'left=[  3, 52, 60]' \
+#  4x1_full_wall_lines.scad
+#
+#$OPENSCAD -o intermediate/4x1_staggered_full_wall_line_top.stl \
+#  -D 'rend=true' -D 'random=false' -D 'staggered=true' -D 'render_top=true' \
+#  -D 'front=[27,  8,  3, 56, 44, 59, 39, 63, 18, 31,  6]' \
+#  -D 'back=[  1, 26, 13, 39, 31, 22,  4,  1, 58, 24, 12]' \
+#  -D 'right=[40, 58, 50]' \
+#  -D 'left=[3, 52, 60]' \
+#  -D 'top=[  19, 37, 16, 58, 28, 63,  1, 13, 46, 18, 26,  2,  4, 33, 28, 50, 14, 59, 21, 31, 38,  0, 24, 17, 20, 5, 57, 25, 35, 61, 23]' \
+#  4x1_full_wall_lines.scad
+#
 
