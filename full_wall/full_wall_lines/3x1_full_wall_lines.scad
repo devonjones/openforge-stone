@@ -1,6 +1,6 @@
 include <../../../lib/forge_lib.scad>
 
-module 2x1_wall_line(sc, seed, manifold=-0.05) {
+module 3x1_wall_line(sc, seed, manifold=-0.05) {
   seed_vect = rands(0, 100, 20, seed=seed);
   
   translate([0,1,0]) scale([1,1,1+sc]) union() {
@@ -37,7 +37,7 @@ module 2x1_wall_line(sc, seed, manifold=-0.05) {
   }
 }
       
-module 2x1_static_wall_line(front, back, right, left, manifold=-0.05) {
+module 3x1_static_wall_line(front, back, right, left, manifold=-0.05) {
   translate([0,1,0]) scale([1,1,1+sc]) union() {
     translate([1,0,0]) cube([73,23,7]);
     translate([0,-manifold,0]) union() {
@@ -72,7 +72,7 @@ module 2x1_static_wall_line(front, back, right, left, manifold=-0.05) {
   }
 }
 
-module 2x1_stagger_wall_line(sc, seed, manifold=-0.05) {
+module 3x1_stagger_wall_line(sc, seed, manifold=-0.05) {
   seed_vect = rands(0, 100, 21, seed=seed);
   translate([0,1,0]) scale([1,1,1+sc]) union() {
     translate([1,0,0]) cube([73,23,7]);
@@ -109,7 +109,7 @@ module 2x1_stagger_wall_line(sc, seed, manifold=-0.05) {
   }
 }
 
-module 2x1_static_stagger_wall_line(front, back, right, left, manifold=-0.05) {
+module 3x1_static_stagger_wall_line(front, back, right, left, manifold=-0.05) {
   translate([0,1,0]) scale([1,1,1+sc]) union() {
     translate([1,0,0]) cube([73,23,7]);
     translate([0,-manifold,0]) union() {
@@ -145,7 +145,7 @@ module 2x1_static_stagger_wall_line(front, back, right, left, manifold=-0.05) {
   }
 }
 
-module 2x1_wall_top(seed, manifold=-0.05) {
+module 3x1_wall_top(seed, manifold=-0.05) {
   seed_vect = rands(0, 100, 23, seed=seed);
   translate([0,1,manifold]) rotate([-90,0,0]) scale([1,1,8.2/7]) union() {
     translate([1,0,0]) scale([.9,1,7/10]) rand_face("../../../lib/", seed_vect[0]);
@@ -179,7 +179,7 @@ module 2x1_wall_top(seed, manifold=-0.05) {
   }
 }
 
-module 2x1_static_wall_top(top, manifold=-0.05) {
+module 3x1_static_wall_top(top, manifold=-0.05) {
   translate([0,1,manifold]) rotate([-90,0,0]) scale([1,1,8.2/7]) union() {
     translate([1,0,0]) scale([.9,1,7/10]) static_face("../../../lib/", top[0]);
     translate([10,0,0]) scale([1,1,7/10]) static_face("../../../lib/", top[1]);
@@ -212,7 +212,7 @@ module 2x1_static_wall_top(top, manifold=-0.05) {
   }
 }
 
-module 2x1_staggered_wall_top(seed, manifold=-0.05) {
+module 3x1_staggered_wall_top(seed, manifold=-0.05) {
   seed_vect = rands(0, 100, 25, seed=seed);
   translate([25,0,0]) rotate([0,0,90]) union() {
     translate([0,1,manifold]) rotate([-90,0,0]) scale([1,1,8.2/7]) union() {
@@ -249,7 +249,7 @@ module 2x1_staggered_wall_top(seed, manifold=-0.05) {
   }
 }
 
-module 2x1_static_staggered_wall_top(top, manifold=-0.05) {
+module 3x1_static_staggered_wall_top(top, manifold=-0.05) {
   translate([25,0,0]) rotate([0,0,90]) union() {
     translate([0,1,manifold]) rotate([-90,0,0]) scale([1,1,8.2/7]) union() {
       translate([1,0,15.4]) scale([1.15,1,6/10]) static_face("../../../lib/", top[2]);
@@ -299,26 +299,26 @@ seed_vect=rands(0, 100, 2);
 if(rend) {
   if(random) {
     if(staggered) {
-      2x1_stagger_wall_line(0, seed_vect[0]);
+      3x1_stagger_wall_line(0, seed_vect[0]);
       if(render_top) {
-        translate([0,0,7]) 2x1_staggered_wall_top(seed_vect[1]);
+        translate([0,0,7]) 3x1_staggered_wall_top(seed_vect[1]);
       }
     } else {
-      2x1_wall_line(0, seed_vect[0]);
+      3x1_wall_line(0, seed_vect[0]);
       if(render_top) {
-        translate([0,0,7]) 2x1_wall_top(seed_vect[1]);
+        translate([0,0,7]) 3x1_wall_top(seed_vect[1]);
       }
     }
   } else {
     if(staggered) {
-      2x1_static_stagger_wall_line(front, back, right, left);
+      3x1_static_stagger_wall_line(front, back, right, left);
       if(render_top) {
-        translate([0,0,7]) 2x1_static_staggered_wall_top(top);
+        translate([0,0,7]) 3x1_static_staggered_wall_top(top);
       }
     } else {
-      2x1_static_wall_line(front, back, right, left);
+      3x1_static_wall_line(front, back, right, left);
       if(render_top) {
-        translate([0,0,7]) 2x1_static_wall_top(top);
+        translate([0,0,7]) 3x1_static_wall_top(top);
       }
     }
   }
