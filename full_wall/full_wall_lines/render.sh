@@ -99,9 +99,10 @@ mkdir -p intermediate
 #$OPENSCAD -o intermediate/1x1_staggered_full_wall_line_5.stl \
 #  -D 'rend=true' -D 'random=false' -D 'staggered=true' -D 'render_top=false' \
 #  -D 'front=[8, 0, 62]' \
-#  -D 'back=[13, 6, 49]' \
-#  -D 'right=[17, 26, 39]' \
-#  -D 'left=[24, 55, 29]' \
+#  -D 'front=[53, 61, 35]' \
+#  -D 'back=[50, 27, 4]' \
+#  -D 'right=[46, 17, 14]' \
+#  -D 'left=[38, 51, 54]' \
 #  1x1_full_wall_lines.scad
 #
 #$OPENSCAD -o intermediate/1x1_staggered_full_wall_line_6.stl \
